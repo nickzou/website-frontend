@@ -1,13 +1,10 @@
-import Head from 'next/head';
+import Head from '../components/Head';
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Hello World</title>
-      </Head>
-      <body
-        ><h1>Hello World</h1>
+      <Head />
+      <body><h1>Hello World</h1>
       </body>
     </>
   )
