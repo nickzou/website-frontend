@@ -13,7 +13,7 @@ export default function Header() {
                     <div className="col d-flex justify-content-start align-items-center flex-grow-1">
                     logo
                     </div>
-                    <div className="col p-0 d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 bg-slate">
+                    <div className={`col p-0 d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 bg-slate ${styles.hamburger}`}>
                         <Hamburger
                             toggled={menuIsOpen}
                             toggle={setMenuIsOpen}

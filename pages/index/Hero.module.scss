@@ -1,0 +1,18 @@
+@import 'styles/common';
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - #{$header-height});
+    display: flex;
+    align-items: center;
+}
+
+.site_title {
+    text-transform: uppercase;
+}
+
+.site_subtitle {
+    @extend %nunito;
+    font-size: rem(20px);
+    font-weight: 600;
+}

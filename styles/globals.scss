@@ -15,7 +15,7 @@
 @import "~bootstrap/scss/utilities/api";
 
 //Custom
-@import 'variables';
+@import 'common';
 
 .bg-charcoal {
     background-color: $charcoal;
@@ -31,4 +31,38 @@
 
 .slate {
     color: $slate;
+}
+
+.bg-gold {
+    background-color: $gold;
+}
+
+.gold {
+    color: $gold;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.white {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+h1, .heading-1 {
+    font-size: rem(64px);
+    @extend %roboto;
+    letter-spacing: 1.05;
+}
+
+.roboto {
+    @extend %roboto;
+}
+
+.nunito {
+    @extend %nunito;
 }
