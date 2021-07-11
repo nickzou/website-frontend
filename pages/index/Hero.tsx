@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import styles from './Hero.module.scss';
+import BackgroundImage from '@public/images/toronto.jpg';
 
 export default function Hero() {
     return(
         <section id="hero" className={styles.hero}>
-            <div className="container">
+            <div className={`container position-relative white ${styles.content}`}>
                 <div className="row">
                     <div className="col">
                         <hgroup>
@@ -13,6 +15,15 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+            <Image
+                src={BackgroundImage}
+                className={'background-image'}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="50% 70%"
+                alt="Financial district, downtown Toronto"
+                priority
+            />
         </section>
     );
 };
