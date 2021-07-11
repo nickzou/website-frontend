@@ -1,6 +1,10 @@
-@import '../../styles/variables';
+@import 'styles/common';
 
 .header {
     background-color: $charcoal;
     height: $header-height;
+}
+
+.hamburger {
+    flex-basis: $header-height;
 }
