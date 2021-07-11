@@ -1,4 +1,4 @@
-// Configuration
+// Boostrap
 @import "~bootstrap/scss/functions";
 @import "overrides/boostrap";
 @import "~bootstrap/scss/variables";
@@ -12,3 +12,23 @@
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/utilities/api";
+
+//Custom
+@import 'variables';
+
+.bg-charcoal {
+    background-color: $charcoal;
+}
+
+.charcoal {
+    color:$charcoal;
+}
+
+.bg-slate {
+    background-color: $slate;
+}
+
+.slate {
+    color: $slate;
+}
