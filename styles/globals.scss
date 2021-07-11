@@ -66,3 +66,7 @@ h1, .heading-1 {
 .nunito {
     @extend %nunito;
 }
+
+.background-image {
+    z-index: 0;
+}
