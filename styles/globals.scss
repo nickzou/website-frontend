@@ -19,6 +19,11 @@
 //Custom
 @import 'common';
 
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 .bg-charcoal {
     background-color: $charcoal;
 }

@@ -12,8 +12,13 @@
 .menu_wrapper {
     position: absolute;
     margin-top: $header-height!important;
+    left: 100vw;
     height: calc(100vh - #{$header-height});
     z-index: 2;
     padding: 40px 34px!important;
     text-align: right;
+    transition: 0.2s ease-in-out;
+}
+.is_active {
+    left: 0;
 }
