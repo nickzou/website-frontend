@@ -1,9 +1,11 @@
+import React from "react";
+
 interface props {
     condition: any,
-    wrapper: any,
-    children: React.ReactNode
+    wrapper: (children: JSX.Element) => JSX.Element,
+    children: JSX.Element
 }
 
-const ConditionalWrapper = (props:props) => props.condition ? props.wrapper(props.children) : props.children;
+export default function ConditionalWrapper({condition, wrapper, children}:props) { return condition ? wrapper(children) : children };
 
-export default ConditionalWrapper
+ 
