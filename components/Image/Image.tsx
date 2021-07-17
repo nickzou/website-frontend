@@ -1,4 +1,6 @@
 import styles from './Image.module.scss';
+import ConditionalWrapper from '@components/ConditionalWrapper';
+import React from 'react';
 
 interface props {
     src: string,
@@ -21,7 +23,7 @@ interface props {
 
 export default function Image(props: props) {
     return(
-        <div className={`image${props.backgroundImage && ` ${styles.background_image_wrapper}`}`}>
+        <ConditionalWrapper condition={props.backgroundImage} wrapper={children => <div className={styles.background_image_wrapper}>{children}</div>} >
             <picture>
                 {props.desktopLargePortraitSrcSet && <source srcSet={props.desktopLargePortraitSrcSet} media="(min-width: 900px) and (orientation: portrait)"/>}
                 {props.desktopLargeSrcSet && <source srcSet={props.desktopLargeSrcSet} media="(min-width: 1440px)"/>}
@@ -37,6 +39,6 @@ export default function Image(props: props) {
                 {props.mobileSrcSet && <source srcSet={props.mobileSrcSet}/>}
                 <img src={`${props.src}`} alt={props.alt} className={`${props.backgroundImage && ` ${styles.background_image}`}`}/>
             </picture>
-        </div>
+        </ConditionalWrapper>
     );
 }
