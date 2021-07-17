@@ -1,0 +1,16 @@
+@import 'common';
+
+$hamburger-layer-width: 25px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-color: $gold;
+
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+
+.hamburger {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 100%;
+    background-color: $slate;
+}
