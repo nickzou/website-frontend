@@ -1,0 +1,23 @@
+@use '~sass-rem' as rem;
+@import '../../styles/common';
+
+.menu {
+    @extend %roboto;
+    ul {
+        list-style: none;
+    }
+    li {
+        margin-bottom: rem.convert(24px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        text-decoration: none;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+        font-size: rem.convert(26px);
+        letter-spacing: 0.1rem;
+    }
+}

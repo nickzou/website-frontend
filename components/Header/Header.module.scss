@@ -8,3 +8,12 @@
 .hamburger {
     flex-basis: $header-height;
 }
+
+.menu_wrapper {
+    position: absolute;
+    margin-top: $header-height!important;
+    height: calc(100vh - #{$header-height});
+    z-index: 2;
+    padding: 40px 34px!important;
+    text-align: right;
+}
