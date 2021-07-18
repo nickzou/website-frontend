@@ -1,3 +1,4 @@
+import cx from 'classnames/bind';
 import styles from './Image.module.scss';
 import ConditionalWrapper from '@components/ConditionalWrapper';
 import React from 'react';
@@ -7,6 +8,7 @@ interface props {
     alt?: string,
     className?: string
     backgroundImage?: boolean,
+    overlay?: boolean,
     mobileSrcSet?: string
     mobileLandscapeSrcSet?: string
     phabletSrcSet?: string
@@ -21,9 +23,15 @@ interface props {
     desktopLargePortraitSrcSet?: string,
 }
 
+let conditionalStyles = {
+    overlay: styles.overlay
+}
+
+let classes = cx.bind(conditionalStyles)
+
 export default function Image(props: props) {
     return(
-        <ConditionalWrapper condition={props.backgroundImage} wrapper={children => <div className={styles.background_image_wrapper}>{children}</div>} >
+        <ConditionalWrapper condition={props.backgroundImage} wrapper={children => <div className={classes(`background-image-wrapper ${styles.background_image_wrapper}`, {overlay:props.overlay})}>{children}</div>} >
             <picture>
                 {props.desktopLargePortraitSrcSet && <source srcSet={props.desktopLargePortraitSrcSet} media="(min-width: 900px) and (orientation: portrait)"/>}
                 {props.desktopLargeSrcSet && <source srcSet={props.desktopLargeSrcSet} media="(min-width: 1440px)"/>}
