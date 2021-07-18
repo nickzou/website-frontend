@@ -18,6 +18,12 @@
     padding: 40px 34px!important;
     text-align: right;
     transition: 0.2s ease-in-out;
+    @media(orientation: landscape) {
+        padding: 0px 34px!important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 .is_active {
     left: 0;

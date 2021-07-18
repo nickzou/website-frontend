@@ -1,22 +1,42 @@
+@use '~sass-rem' as rem;
 @import 'styles/common';
 
 .hero {
     position: relative;
     min-height: calc(100vh - #{$header-height});
-    display: flex;
-    align-items: center;
 }
 
 .content {
+    position: absolute;
+    top: 33.333%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
+    @media(orientation: landscape) {
+        top: 50%;
+    }
+}
+
+.hgroup {
+    text-align: center;
+    @media(orientation: landscape) {
+        text-align: left;
+    }
 }
 
 .site_title {
     text-transform: uppercase;
+    font-weight: 900;
+}
+
+.outline {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: rgba(white, 0);
 }
 
 .site_subtitle {
     @extend %nunito;
-    font-size: rem(20px);
+    font-size: rem.convert(20px);
     font-weight: 600;
 }

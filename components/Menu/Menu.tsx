@@ -17,6 +17,18 @@ export default function Menu(props:props) {
                     {
                         title: 'skills',
                         link: '#skills'
+                    },
+                    {
+                        title: 'timeline',
+                        link: '#timeline'
+                    },
+                    {
+                        title: 'portfolio',
+                        link: '#portfolio'
+                    },
+                    {
+                        title: 'contact',
+                        link: '#contact'
                     }
                 ].map(item=> <li key={uuid()}><a href={item.link}>{item.title}</a></li>)}
             </ul>
