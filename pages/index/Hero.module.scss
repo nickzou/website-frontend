@@ -40,3 +40,22 @@
     font-size: rem.convert(20px);
     font-weight: 600;
 }
+
+.row__content_landscape {
+    @media(orientation: landscape) and (max-width: 812px) {
+        justify-content: flex-start !important;
+    }
+}
+
+.col__cta {
+    text-align: center;
+    @media(orientation: landscape) {
+        text-align: left;
+    } 
+}
+
+.col__content_landscape {
+    @media(orientation: landscape) and (max-width: 812px) {
+        max-width: 45%;
+    }
+}
