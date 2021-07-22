@@ -39,11 +39,20 @@
     @extend %nunito;
     font-size: rem.convert(20px);
     font-weight: 600;
+    @media(min-width: 768px) {
+        font-size: rem.convert(28px);
+    }
 }
 
 .row__content_landscape {
-    @media(orientation: landscape) and (max-width: 812px) {
+    @media(orientation: landscape) and (max-width: 896px) {
         justify-content: flex-start !important;
+    }
+}
+
+.col__content_landscape {
+    @media(orientation: landscape) and (max-width: 896px) {
+        max-width: 50%;
     }
 }
 
@@ -54,8 +63,8 @@
     } 
 }
 
-.col__content_landscape {
-    @media(orientation: landscape) and (max-width: 812px) {
-        max-width: 45%;
+.col__cta_landscape {
+    @media(orientation: landscape) and (max-width: 896px) {
+        max-width: 41.6666666667%;
     }
 }

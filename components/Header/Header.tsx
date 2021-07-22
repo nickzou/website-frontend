@@ -20,7 +20,7 @@ export default function Header() {
 
     return(
         <header className={styles.header} role="heading" aria-level={1}>
-            <div className="container-lg h-100">
+            <div className="container-xl h-100">
                 <div className="row h-100 position-relative">
                     <div className="col d-flex justify-content-start align-items-center flex-grow-1">
                     </div>
