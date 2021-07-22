@@ -73,6 +73,9 @@ h1, .heading-1 {
     @extend %roboto;
     letter-spacing: 0.05rem;
     font-weight: 800;
+    @media(min-width: 768px) {
+        font-size: rem.convert(110px);
+    }
 }
 
 .roboto {

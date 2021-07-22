@@ -35,7 +35,7 @@ export default function Image(props: props) {
             <picture>
                 {props.desktopLargePortraitSrcSet && <source srcSet={props.desktopLargePortraitSrcSet} media="(min-width: 900px) and (orientation: portrait)"/>}
                 {props.desktopLargeSrcSet && <source srcSet={props.desktopLargeSrcSet} media="(min-width: 1440px) and (orientation: landscape)"/>}
-                {props.desktopPortraitSrcSet && <source srcSet={props.desktopPortraitSrcSet} media="(min-width: 768px) and (orientation: portrait)"/>}
+                {props.desktopPortraitSrcSet && <source srcSet={props.desktopPortraitSrcSet} media="(min-width: 800px) and (orientation: portrait)"/>}
                 {props.desktopSrcSet && <source srcSet={props.desktopSrcSet} media="(min-width: 1366px) and (orientation: landscape)"/>}
                 {props.tabletLargeLandscapeSrcSet && <source srcSet={props.tabletLargeLandscapeSrcSet} media="(min-width: 1366px) and (orientation: landscape)"/>}
                 {props.tabletLargeSrcSet && <source srcSet={props.tabletLargeSrcSet} media="(min-width: 1024px) and (orientation: portrait)"/>}
