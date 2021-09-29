@@ -82,6 +82,15 @@ h1, .heading-1 {
     }
 }
 
+h2, .section-title {
+    font-size: rem.convert(34px);
+    @extend %roboto;
+    font-weight: 700;
+    @media(min-width: 768px) {
+        font-size: rem.convert(46px);
+    }
+}
+
 .roboto {
     @extend %roboto;
 }
