@@ -2,6 +2,7 @@
 @import '../../styles/common';
 
 .button {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +18,50 @@
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
+    transition: all 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+    &:hover {
+        &:after {
+            left: 120%;
+        }
+    }
+    &:after {
+        content: '';
+        background: $gold;
+        height: 155px;
+        left: -75px;
+        opacity: 0.2;
+        position: absolute;
+        top: -50px;
+        width: 50px;
+        transform: rotate(35deg);
+        transition: all 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+        z-index: 1;
+    }
+    span {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .fill {
     background-color: $charcoal;
     border-color: $charcoal;
     color: $gold;
+    &:hover {
+        color: $gold;
+    }
 }
 
 .outline {
     background: none;
     border-color: $charcoal;
     color: $charcoal;
+    &:hover {
+        color: $charcoal;
+    }
+    &:after {
+        background: white;
+        opacity: 0.15;
+    }
 }
