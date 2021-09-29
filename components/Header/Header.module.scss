@@ -13,16 +13,27 @@
     position: absolute;
     margin-top: $header-height!important;
     left: 100vw;
+    width: 100vw;
     height: calc(100vh - #{$header-height});
     z-index: 2;
     padding: 40px 34px!important;
     text-align: right;
     transition: 0.15s ease-in-out;
+    background-color: $dim;
     @media(orientation: landscape) {
         padding: 0px 34px!important;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    @media(min-width: 992px) {
+        position: relative;
+        margin-top: 0!important;
+        left: initial;
+        height: 100%;
+        padding: 0;
+        width: initial;
+        background: none;
     }
 }
 .is_active {
