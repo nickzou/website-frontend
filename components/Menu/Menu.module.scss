@@ -7,11 +7,18 @@
         list-style: none;
         padding-inline-start: 0;
         margin-bottom: 0;
+        @media(min-width: 992px) {
+            display: flex;
+        }
     }
     li {
         margin-bottom: rem.convert(24px);
         &:last-child {
             margin-bottom: 0;
+        }
+        @media(min-width: 992px) {
+            margin-bottom: 0;
+            margin-left: rem.convert(28px);
         }
     }
     a {
@@ -21,5 +28,12 @@
         text-transform: uppercase;
         font-size: rem.convert(26px);
         letter-spacing: 0.1rem;
+        @media(min-width: 992px) {
+            font-size: rem.convert(16px);
+            letter-spacing: 0.2rem;
+        }
+        &:hover {
+            color: $gold;
+        }
     }
 }

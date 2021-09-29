@@ -16,6 +16,6 @@ const classes = cx.bind(conditionalStyles)
 
 export default function Button(props:props) {
     return (
-        <a href={props.link} className={classes(`${styles.button}`, {fill:!props.outline}, {outline:props.outline})}>{props.text}</a>
+        <a href={props.link} className={classes(`${styles.button}`, {fill:!props.outline}, {outline:props.outline})}><span>{props.text}</span></a>
     )
 }
