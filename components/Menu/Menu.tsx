@@ -15,10 +15,6 @@ export default function Menu(props:props) {
                         link: '#about'
                     },
                     {
-                        title: 'skills',
-                        link: '#skills'
-                    },
-                    {
                         title: 'timeline',
                         link: '#timeline'
                     },
